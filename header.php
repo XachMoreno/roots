@@ -2,7 +2,7 @@
 <!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" <?php language_attributes(); ?>> <![endif]-->
 <!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" <?php language_attributes(); ?>> <![endif]-->
 <!--[if IE 8]>    <html class="no-js lt-ie9" <?php language_attributes(); ?>> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
 
@@ -12,8 +12,19 @@
 
   <script src="<?php echo get_template_directory_uri(); ?>/js/vendor/modernizr-2.5.3.min.js"></script>
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="<?php echo get_template_directory_uri(); ?>/js/vendor/jquery-1.7.2.min.js"><\/script>')</script>
+  <!-- jQuery with fallback-->   
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript">
+    if (typeof jQuery == 'undefined') {
+      document.write(unescape("%3Cscript src='<?php echo get_template_directory_uri(); ?>/js/vendor/jquery-1.7.2.min.js' type='text/javascript'%3E%3C/script%3E"));
+    }
+  </script>
+
+  <!--include FlexSlider CSS-->
+  <link rel="stylesheet" href="http://www.zachariahmoreno.com/wp-content/themes/roots/js/FlexSlider/flexslider.css">
+  
+  <!--include FancyBox CSS-->
+  <link rel="stylesheet" href="http://www.zachariahmoreno.com/wp-content/themes/roots/js/fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen">
 
   <?php roots_head(); ?>
   <?php wp_head(); ?>
@@ -32,7 +43,13 @@
       get_template_part('templates/header', 'default');
     }
   ?>
+
   <?php roots_header_after(); ?>
 
   <?php roots_wrap_before(); ?>
   <div id="wrap" class="<?php echo WRAP_CLASSES; ?>" role="document">
+    <!-- <div class="row">
+      <div class="span1" id="logo-container">
+        <img src="http://zachariahmoreno.com/assets/index.png" alt="logo" id="logo">
+      </div>
+    </div> -->

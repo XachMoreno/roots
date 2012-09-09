@@ -12,6 +12,9 @@
       </a>
       <nav id="nav-main" class="nav-collapse" role="navigation">
         <?php wp_nav_menu(array('theme_location' => 'primary_navigation', 'menu_class' => 'nav')); ?>
+        <!-- <form class="navbar-search pull-right">
+          <input type="text" class="search-query uneditable-input" placeholder="Search">
+        </form> -->
       </nav>
     </div>
   </div>

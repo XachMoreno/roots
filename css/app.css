@@ -2,9 +2,35 @@
    Base
    ========================================================================== */
 
-body { }
+body {
+  background: url(http://zachariahmoreno.com/assets/cubes.png) repeat fixed;
 
+}
 
+::-moz-selection {
+    background: #FF5E99;
+    text-shadow: none;
+    color: white;
+}
+
+::selection {
+    background: #FF5E99;
+    text-shadow: none;
+    color: white;
+}
+
+/* https://gist.github.com/452577 */
+.kern { 
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color: #1C7FA6;
+}
+
+article {
+  margin-bottom: 20px;
+}
 
 /* =============================================================================
    Header
@@ -13,16 +39,91 @@ body { }
 #banner { }
 
 /* Fixed Topbar Navigation */
-body.top-navbar { padding-top: 60px; }
-body.admin-bar .navbar-fixed-top { top: 28px; }
+body.top-navbar { 
+  padding-top: 60px; 
+}
 
+body.admin-bar .navbar-fixed-top { 
+  top: 28px; 
+}
 
+.navbar-inner {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAALElEQVQIHWNsbGr9z4AEbipaMTAh8RlAAur3jyEEYQIgRWCVyAJgQXQBkCAAZ30PxVWG284AAAAASUVORK5CYII=) repeat;
+}
+
+.navbar .nav .active > a {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAALElEQVQIHWNsbGr9z4AEZv9VZGBC4jOABFKZ7yMEYQIgRWCVyAJgQXQBkCAAnNsQSvxngIIAAAAASUVORK5CYII=) repeat;
+}
+
+.navbar .nav a:hover {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAALElEQVQIHWNsbGr9z4AEZv9VZGBC4jOABFKZ7yMEYQIgRWCVyAJgQXQBkCAAnNsQSvxngIIAAAAASUVORK5CYII=) repeat;
+}
+
+.navbar .brand {
+  color: white;
+  font-family: 'Open Sans';
+}
+
+.navbar .nav > li > a {
+  color: white
+}
+
+/*
+.navbar-search .search-query {
+  background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAI0lEQVQIW2NkwATGjGhixkD+WWRBsABIEUwQLgATRBEACQIAr8MEOZtA/yIAAAAASUVORK5CYII=);
+}
+*/
+
+img#logo {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: -20px;
+}
+
+#logo-container {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
 
 /* =============================================================================
    Content
    ========================================================================== */
 
 #content { }
+
+h1, h2, h3 {
+  font-family: 'raleway';
+}
+
+h1 {
+  font-size: 32px;
+  color: black;
+}
+
+h2 {
+  font-size: 28px;
+  color: #1C7FA6;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+article header h2 {
+  font-family: 'Raleway';
+  font-size: 30px;
+}
+
+blockquote p {
+  font-size: 14px;
+}
+
+.front-page-icon {
+  display: inline;
+  clear: both;
+}
 
 
 
@@ -32,13 +133,97 @@ body.admin-bar .navbar-fixed-top { top: 28px; }
 
 #main { }
 
+.flexslider {
+  height: auto;
+  border-width: 4px;
+/*  border-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAALElEQVQIHWNsbGr9z4AEZv9VZGBC4jOABFKZ7yMEYQIgRWCVyAJgQXQBkCAAnNsQSvxngIIAAAAASUVORK5CYII=) repeat;
+*/}
 
+.flex-caption {
+  display: block;
+  position: relative;
+  margin-top: -90px;
+  font-family: 'raleway';
+  letter-spacing: 2px;
+  font-size: 30px;
+  padding-left: 15px;
+  padding-top: 25px;
+  height: 40px;
+  color: white;
+  background-color: black;
+  opacity: 0.6;
+  margin-bottom: 25px;
+}
+
+.flex-control-paging li a {
+  width: 11px; 
+  height: 11px; 
+  display: block; 
+  background: #1C7FA6; 
+  opacity: 0.3; 
+  cursor: pointer; 
+  text-indent: -9999px; 
+  -webkit-border-radius: 20px; 
+  -moz-border-radius: 20px; 
+  -o-border-radius: 20px; 
+  border-radius: 20px; 
+  box-shadow: inset 0 0 3px rgba(0,0,0,0.3);
+}
+
+.flex-control-paging li a:hover { 
+  background: #1C7FA6; 
+  opacity: 0.7; 
+}
+
+.flex-control-paging li a.flex-active { 
+  background: #1C7FA6; 
+  opacity: 0.9;
+  cursor: default; 
+}
+
+#imahero h2 {
+  font-weight: bold;
+  font-size: 36px;
+  text-align: center;
+  margin-top: 75px;
+  margin-bottom: 55px;
+}
+
+#bottomhero {
+  font-size: 30px;
+}
+
+input.wpcf7-text, textarea.wpcf7-textarea {
+  width: 100%;
+  height: auto;
+  color: #333;
+}
+
+input.wpcf7-text {
+  font-size: 32px;
+}
+
+textarea.wpcf7-textarea {
+  font-size: 26px;
+  line-height: 26px;
+}
+
+#fancybox-overlay {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAALElEQVQIHWNsbGr9z4AEZv9VZGBC4jOABFKZ7yMEYQIgRWCVyAJgQXQBkCAAnNsQSvxngIIAAAAASUVORK5CYII=) repeat;
+  opacity: 0.3;
+}
 
 /* =============================================================================
    Sidebar
    ========================================================================== */
 
-#sidebar { }
+#sidebar { 
+  margin-top: 90px;
+}
+
+#sidebar section {
+  margin-bottom: 40px;
+}
 
 
 
@@ -47,9 +232,27 @@ body.admin-bar .navbar-fixed-top { top: 28px; }
    ========================================================================== */
 
 .hentry header { }
-.hentry time { }
-.hentry p.byline { }
+
+.hentry time {
+  color: #999;
+}
+
+.hentry p.byline {
+  color: #999;
+}
+
 .hentry .entry-content { }
+
+article img {
+  -moz-box-shadow: 0px 6px 26px #333;
+  -webkit-box-shadow: 0px 6px 26px #333;
+  box-shadow: 0px 6px 26px #333;
+}
+
+img.aligncenter {
+  margin-bottom: 15px;
+}
+
 .hentry footer { }
 
 
@@ -58,8 +261,19 @@ body.admin-bar .navbar-fixed-top { top: 28px; }
    Footer
    ========================================================================== */
 
-#content-info { }
+#content-info {
 
+}
+
+
+
+/* =============================================================================
+   Xanadu
+   ========================================================================== */
+
+.description {
+
+}
 
 
 /* =============================================================================
@@ -83,4 +297,99 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
   body.top-navbar {
     padding-top: 0;
   }
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+  .flex-caption {
+    font-size: 24px;
+    padding-top: 10px;
+    height: 30px;
+    margin-top: -70px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  #imahero h2 {
+    font-size: 24px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    line-height: 24px;
+  }
+
+  #bottomhero {
+    font-size: 18px;
+  }
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+
+    h2 {
+      font-size: 20px;
+    }
+
+    #imahero h2 {
+      font-size: 24px;
+      margin-top: 35px;
+      margin-bottom: 15px;
+      line-height: 24px;
+    }
+
+    #bottomhero {
+      font-size: 18px;
+    }
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
 }
